@@ -1,0 +1,23 @@
+LocalDev v0.3
+
+FIX
+- Safe-area top: status bar / network / punch-hole tidak menutupi header.
+- Safe-area bottom: navigation/gesture bar tidak menutupi tombol.
+- IME/keyboard inset ikut dihitung.
+
+UI
+- Brand LocalDev + tagline.
+- Modern dark cyan interface.
+- Rounded workspace, status card, console card, tabs, action buttons.
+- Horizontal action bar supaya tombol tetap aman di layar sempit.
+
+BRANDING
+- Launcher icon LocalDev.
+- Splash screen LocalDev.
+- Play Store 512x512 icon.
+- Master logo, splash, dan UI concept disertakan.
+
+FEATURE
+- HTML / CSS / JS / PHP tabs.
+- PHP index file dari ZIP dapat diedit dan disimpan.
+- Import ZIP, preview, Run PHP, Stop, PHP Info.

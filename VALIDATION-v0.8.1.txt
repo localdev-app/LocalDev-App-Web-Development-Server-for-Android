@@ -1,0 +1,23 @@
+LocalDev v0.8.1 beta validation
+
+Static checks:
+- MainActivity braces balanced.
+- SqlWorkspaceManager braces balanced.
+- SqlDialect compiles as standalone Kotlin.
+- SQL Lab database.sql translates to SQLite as:
+  - SET SQL_MODE skipped intentionally.
+  - CREATE TABLE apks translated successfully.
+  - INSERT rows translated successfully.
+- Translated demo SQL executed in SQLite test and returned 3 rows:
+  1 LocalDev 100
+  2 Demo APK 25
+  3 SQL Lab 8
+
+Behavior change:
+- Run on PHP+database.sql+MySQL project prompts Setup & Run.
+- Setup & Run imports SQL, patches common PDO MySQL config with backup, then starts PHP.
+- Existing local DB + remaining MySQL config prompts Patch & Run.
+
+Limit:
+- This is SQLite compatibility mode, not native MariaDB/MySQL.
+- Complex MySQL-only SQL can still require manual changes or future native MariaDB runtime.

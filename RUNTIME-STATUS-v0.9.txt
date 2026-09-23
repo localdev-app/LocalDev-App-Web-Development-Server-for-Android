@@ -1,0 +1,22 @@
+LocalDev v0.9.0-alpha1 runtime status in this source package
+
+IMPLEMENTED IN APP SOURCE:
+- Native MariaDB manager and lifecycle
+- localhost:3306 profile
+- database/user/password localdev
+- Native database.sql import through MariaDB client
+- pdo_mysql + mysqli diagnostics
+- PHP MySQL socket configuration
+- Native DB UI, config copy, diagnostics, reset
+- Legacy SQLite compatibility retained
+
+NOT PHYSICALLY BUNDLED IN THIS ZIP:
+- MariaDB Android ARM64 server executable
+- MariaDB Android ARM64 client executable
+- initialized MariaDB seed datadir
+- custom PHP Android ARM64 binary with pdo_mysql
+
+A strict native build will intentionally fail unless these runtimes are supplied:
+  ./gradlew assembleRelease -PlocaldevRequireNativeDb=true
+
+See NATIVE_DATABASE_RUNTIME.md.

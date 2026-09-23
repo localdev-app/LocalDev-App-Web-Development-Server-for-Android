@@ -1,0 +1,20 @@
+LocalDev v0.5
+
+FIX PHP RUN
+- PMMP PHP runtime tetap dipakai untuk PHP 8.4 + PDO SQLite + SQLite3 + cURL + OpenSSL + ZIP.
+- Tidak lagi memakai `php -S`, karena runtime PMMP memuat pmmpthread yang hanya mendukung CLI SAPI.
+- Ditambahkan LocalDev HTTP Bridge: HTTP server berjalan di Kotlin pada 127.0.0.1:8080 dan setiap request .php dieksekusi memakai PHP CLI normal.
+- Mendukung static assets, GET, form-urlencoded POST, cookies dasar, session cookie dasar, front-controller fallback ke index.php, dan status HTTP via http_response_code().
+- Request tetap hanya bind ke loopback 127.0.0.1.
+
+FIX EDITOR / KEYBOARD
+- IME tidak lagi dihitung sebagai padding root kedua kali.
+- Saat keyboard terbuka, console + action panel + status card disembunyikan otomatis agar editor tetap besar.
+- Editor default wrap panjang ke layar, tidak lagi mudah terlihat seperti area source hilang.
+- Tombol Edit fokus ke editor dan membuka keyboard.
+- Preview menutup keyboard otomatis.
+- File bar menampilkan nama entry file project yang sedang diimpor.
+
+CATATAN BRIDGE
+- php://input pada CLI SAPI tidak berisi raw HTTP body. LocalDev menyediakan helper localdev_raw_input() dan $GLOBALS['LOCALDEV_RAW_BODY'] untuk raw body.
+- Multipart file upload dan header()/setcookie()/redirect penuh masih akan ditingkatkan pada runtime native LocalDev berikutnya.

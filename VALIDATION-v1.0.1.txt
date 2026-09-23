@@ -1,0 +1,12 @@
+LocalDev v1.0.1 validation
+
+Static validation performed:
+- Kotlin parser reached Android unresolved symbols without reporting syntax/expecting errors.
+- No remaining MaterialAlertDialog chain combines setMessage() + setItems() in MainActivity.
+- New file/folder paths are restricted to current project directory and reject path separators / traversal names.
+- File templates verified for PHP/HTML/CSS/JS/JSON/SQL/Markdown/.htaccess.
+- Gradle versionCode=18, versionName=1.0.1.
+- ZIP integrity tested after packaging.
+
+Runtime note:
+Actual Android behavior must still be smoke-tested after building/signing the APK. No software package can be guaranteed to have zero bugs without device testing.

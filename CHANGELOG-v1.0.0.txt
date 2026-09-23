@@ -1,0 +1,30 @@
+LocalDev v1.0.0
+
+Final UI/features patch based on v0.9.6 sticky-session baseline.
+
+New:
+- Hamburger menu in the main header.
+- Project Files browser with folder navigation.
+- Imported ZIP files are visible, including images/media/binary files.
+- Text/source files can be opened directly from the project browser.
+- Expanded editable formats: PHP/PHTML, HTML, CSS/SCSS/SASS/LESS, JS/MJS/CJS, TS/TSX/JSX, Vue/Svelte, JSON, XML, SQL, YAML, TOML, ENV/config, SVG, CSV, logs and common dotfiles.
+- About LocalDev page.
+- Privacy Policy page.
+- Terms & Conditions page.
+- Disclaimer page.
+- Licenses & Components page.
+- Burger menu shortcuts for Import ZIP, Export ZIP, Database and Runtime/PHP Info.
+
+Kept from v0.9.6:
+- PHP 8.x ARM64 runtime integration.
+- Sticky LocalDev PHP session bridge.
+- HTML/CSS/JS/PHP editor and preview.
+- Fullscreen and floating live preview.
+- ZIP import/export.
+- Pretty-route/assets compatibility.
+- LocalDevDB MySQL-compatible testing server.
+- SQLite workspace support.
+
+Notes:
+- Native MariaDB remains optional and depends on the runtime bundled at build time.
+- CLI bridge limitations for native PHP Location headers remain documented; projects that rely heavily on web-SAPI-specific behavior may require future FastCGI/FPM support.

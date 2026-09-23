@@ -1,0 +1,22 @@
+LocalDev v0.8.0-alpha1 — SQL Lab
+
+NEW
+- Deteksi database.sql / *.sql saat import ZIP.
+- SQL Lab: import dump MySQL/MariaDB umum ke SQLite lokal untuk testing offline.
+- Database Manager: daftar tabel + row count.
+- SQL Query runner bawaan.
+- PHP adapter generator untuk PDO SQLite.
+- Opt-in "Patch common PDO MySQL config" dengan backup sebelum modifikasi.
+- Runtime diagnostics kini mengecek PDO_MySQL dan mysqli juga.
+- LOCALDEV_SQLITE_PATH dikirim ke proses PHP.
+- Project dengan public/index.php sekarang mempertahankan project root dan document root terpisah.
+- SQL file dapat dibuka lewat Files/editor.
+
+FIX
+- Export ZIP tidak menyertakan .localdev/ database testing atau .localdev-backup/.
+- Versi UI diperbarui ke v0.8 alpha.
+
+IMPORTANT
+- Ini belum membundel MariaDB native server. SQL Lab v0.8-alpha memakai SQLite compatibility.
+- Query MySQL-specific (ON DUPLICATE KEY, stored procedure, trigger kompleks, beberapa ALTER/INDEX) tidak dijamin kompatibel.
+- Source produksi tidak dipatch otomatis tanpa konfirmasi. Backup selalu dibuat untuk patch PDO.

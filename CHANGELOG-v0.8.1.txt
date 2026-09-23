@@ -1,0 +1,7 @@
+LocalDev v0.8.1 beta
+- Fix SQL Lab demo Connection refused.
+- Added SQL Auto Setup on Run.
+- Added Setup & Run flow for database.sql + PDO MySQL projects.
+- Added automatic local backup before PDO config patching.
+- Fixed MySQL detection false positives for generic PDO.
+- SQL Lab demo can use LOCALDEV_SQLITE_PATH automatically.

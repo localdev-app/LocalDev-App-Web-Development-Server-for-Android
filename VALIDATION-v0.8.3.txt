@@ -1,0 +1,18 @@
+LocalDev v0.8.3 beta1 validation
+
+Root cause reproduced:
+- v0.8.2 used Kotlin String.replaceFirst(Regex, replacementString)
+- replacementString began with PHP variable $__localdev_config
+- Java regex treated $ as a capture-group reference
+- Result: Illegal group reference
+
+Fix:
+- No regex replacement string is used for the PHP assignment.
+- The patch now concatenates $__localdev_config = with capture group 1 (array( or [).
+
+Regression checks:
+PASS - config.php return array(...) converts to $__localdev_config assignment.
+PASS - resulting config.php passes php -l.
+PASS - multiline PDO MySQL DSN converts to SQLite-aware DSN.
+PASS - resulting DB.php passes php -l.
+PASS - production DB values remain present and are only overridden when LOCALDEV_SQLITE_PATH exists.

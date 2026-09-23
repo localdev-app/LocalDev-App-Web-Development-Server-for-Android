@@ -1,0 +1,10 @@
+LocalDev v0.4.0
+
+- PHP 8.4 Android ARM64 runtime is fetched at BUILD time, SHA-256 verified, then bundled into the APK/AAB.
+- Runtime name changed to liblocaldev_php.so (old test name remains supported as fallback).
+- User-facing runtime error no longer tells end users to run a developer Python script.
+- Run PHP no longer hard-blocks all PHP projects when one optional extension is missing; missing extensions are logged as warnings.
+- PHP/CSS/JS/HTML tabs now use equal-width responsive buttons.
+- Bottom actions changed from overflowing horizontal scroller to a responsive 2x3 grid.
+- Code editor resets horizontal/vertical viewport when a file/tab opens, fixing clipped opening characters.
+- Sample PHP project rebranded from WebRun to LocalDev.

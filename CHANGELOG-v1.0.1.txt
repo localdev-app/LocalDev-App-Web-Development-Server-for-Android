@@ -1,0 +1,11 @@
+LocalDev v1.0.1 — File Manager Final Hotfix
+
+- Fix Burger Menu list not visible on some Material/Android dialogs.
+- Fix Project Files list not visible when a summary message was combined with setItems().
+- Project Files now lists imported ZIP folders/files and opens editable files directly.
+- Added Create File and Create Folder in every project directory.
+- Added blank PHP/static project creation without ZIP import.
+- New index.php/public/index.php automatically becomes active PHP entry.
+- Added safe file-name/path validation and starter templates for common file types.
+- Fixed Database menu item visibility using list-only dialog + separate diagnostics item.
+- VersionCode 18 / VersionName 1.0.1.

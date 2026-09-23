@@ -1,0 +1,12 @@
+LocalDev v0.9.0-alpha1 — Native Database Architecture
+
+- Native MariaDB service manager ditambahkan.
+- Profile DB standar: localhost:3306 / localdev / localdev / localdev / utf8mb4.
+- Native import database.sql.
+- PDO MySQL + mysqli diagnostics.
+- Copy config database dari UI.
+- Source PHP project tidak lagi dipatch ke SQLite secara default.
+- SQLite compatibility dipertahankan sebagai legacy fallback.
+- Gradle dapat membungkus custom PHP runtime dan LocalDev-compatible MariaDB runtime.
+- Build strict: -PlocaldevRequireNativeDb=true.
+- Version: 0.9.0-alpha1 / versionCode 11.

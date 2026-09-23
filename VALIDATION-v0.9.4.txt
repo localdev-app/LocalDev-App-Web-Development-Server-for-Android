@@ -1,0 +1,5 @@
+LocalDev v0.9.4 static validation
+- PHP bridge session regeneration cookie logic patched.
+- Kotlin localhost fallback cookie jar added.
+- Version bumped to 0.9.4-beta1 / code 15.
+Runtime test required on Android: GET /admin/login -> POST credentials -> redirect -> authenticated dashboard.

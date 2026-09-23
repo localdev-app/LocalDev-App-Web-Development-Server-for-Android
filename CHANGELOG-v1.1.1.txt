@@ -1,0 +1,7 @@
+LocalDev v1.1.1
+- Fix HTTPS Web Extractor: bundled CA root certificate store for PHP cURL/OpenSSL.
+- Adds curl.cainfo, openssl.cafile, SSL_CERT_FILE and CURL_CA_BUNDLE runtime configuration.
+- Web Extractor keeps TLS verification enabled; no insecure SSL bypass.
+- Redesigned burger menu into a polished full-height side panel with project/tool/legal sections.
+- Redesigned Web Extractor dialog and enabled asset download by default.
+- VersionCode 20.

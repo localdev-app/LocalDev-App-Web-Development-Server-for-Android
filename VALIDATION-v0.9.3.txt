@@ -1,0 +1,12 @@
+LocalDev v0.9.3 route validation targets
+
+ApkNusa/portal-style source:
+- /admin/login -> admin/login.php
+- /apk/demo-slug -> app.php?slug=demo-slug
+- /kategori/hiwin -> category.php?slug=hiwin
+- /tentang-kami -> page.php?slug=about
+- /kontak -> page.php?slug=contact
+- /sitemap.xml -> sitemap.php
+- existing assets/css/*.css served directly
+- missing static requests return 404 instead of executing index.php
+- stale hashed uploads/site names may use the newest same-prefix file for preview

@@ -1,0 +1,33 @@
+LocalDev v0.9.2 validation
+
+1. ApkNusa database.sql conversion
+   - 34 executable translated statements
+   - 16 intentionally skipped MySQL control/MODIFY statements
+   - 0 SQLite execution errors
+   - 8 tables created
+
+2. MySQL wire protocol host-side test
+   MariaDB Connector/C connected to LocalDevDB and verified:
+   - SELECT VERSION(): OK
+   - SELECT DATABASE(): OK
+   - COM_STMT_PREPARE / COM_STMT_EXECUTE native prepared statement: OK
+   - prepared value returned: prepared-ok
+
+3. ApkNusa query compatibility spot checks
+   - DATE_SUB(NOW(), INTERVAL N MINUTE): OK
+   - DATE_SUB(CURDATE(), INTERVAL N DAY): OK
+   - DATE_ADD(NOW(), INTERVAL 1 HOUR): OK
+   - GREATEST + TIMESTAMPDIFF(SECOND,...): OK
+   - ON DUPLICATE KEY UPDATE + VALUES(column): OK
+   - IF(condition, VALUES(column), column): OK
+
+4. Kotlin checks
+   - SqlDialect + SqlWorkspaceManager compile with Android API stubs: OK
+   - PhpRuntimeManager compile with Android/JSONObject stubs: OK
+   - MysqlCompatServer protocol implementation compile with Android SQLite stubs: OK
+
+Android device test is still required after building the APK because the full Android UI project was not assembled in this environment.
+
+5. Project switching safety
+   - Existing LocalDevDB READY state is not reused blindly for a newly imported project.
+   - Each project re-applies its reversible TCP profile and PDO MySQL self-test before PHP preview starts.

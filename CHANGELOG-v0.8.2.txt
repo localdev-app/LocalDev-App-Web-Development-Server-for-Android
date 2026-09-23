@@ -1,0 +1,5 @@
+LocalDev v0.8.2 beta1
+- config.php return-array auto patch
+- multiline PDO MySQL DSN patch
+- local site_url override
+- backup before patch

@@ -1,0 +1,10 @@
+LocalDev v0.9.6 Beta — Session Cookie Sync + White Redirect Diagnostic
+
+- Fix utama: fallback cookie jar sekarang MERGE dengan Cookie browser dan menimpa nilai
+  PHPSESSID yang stale dengan session id terbaru yang dikeluarkan LocalDev.
+- Memperbaiki kasus: admin berhasil dibuat/login, tetapi /admin/index.php menganggap session
+  hilang lalu menghasilkan halaman putih.
+- Cookie project lain tetap dipertahankan.
+- Response 3xx kosong tanpa Location tidak lagi tampil putih; LocalDev menampilkan diagnostic
+  eksplisit karena PHP CLI tidak mengekspos Location header melalui headers_list().
+- Version 0.9.6-beta1 / versionCode 16.

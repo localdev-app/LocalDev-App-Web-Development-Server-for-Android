@@ -1,0 +1,28 @@
+# Android / Gradle
+.gradle/
+.idea/
+local.properties
+build/
+app/build/
+*.iml
+
+# LocalDev runtime cache generated/downloaded during build
+.runtime-cache/
+
+# Signing material - NEVER commit
+*.jks
+*.keystore
+*.p12
+*.pfx
+keystore.properties
+signing.properties
+
+# OS/editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Logs / temporary files
+*.log
+*.tmp

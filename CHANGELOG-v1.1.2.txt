@@ -1,0 +1,5 @@
+LocalDev v1.1.2
+- Fix Android compile error: Unresolved reference 'Window' in MainActivity.kt.
+- Uses fully-qualified android.view.Window.FEATURE_NO_TITLE to avoid import ambiguity.
+- Keeps Web Extractor CA bundle and redesigned burger drawer from v1.1.1.
+- VersionCode 21.

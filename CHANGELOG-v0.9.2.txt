@@ -1,0 +1,17 @@
+LocalDev v0.9.2 Beta — MySQL project compatibility
+
+Main fixes
+- LocalDevDB now gets an end-to-end PDO MySQL TCP self-test before UI says READY.
+- The test checks PDO driver=mysql, SELECT VERSION(), SELECT DATABASE(), and a native prepared statement.
+- Imported config.php/.env can receive a reversible local TCP profile.
+- host=localhost is changed to 127.0.0.1 only inside the imported LocalDev copy because PDO MySQL treats localhost as a Unix-socket connection.
+- site_url/base_url production values in common PHP config arrays are changed to http://127.0.0.1:8080 inside the imported copy so assets/AJAX/redirects stay in preview.
+- Production config is backed up under .localdev-backup/mysql-profile-*.
+- More -> Restore production config restores the latest profile backup.
+- SQL import skips phpMyAdmin ALTER TABLE ... MODIFY ... AUTO_INCREMENT statements that SQLite cannot execute and that are unnecessary in compatibility mode.
+- Added runtime translation for TIMESTAMPDIFF(SECOND, ..., NOW()) and common MySQL IF(condition, yes, no).
+- LocalDevDB wire protocol version bumped to 0.9.2.
+
+Important
+LocalDevDB is a MySQL-wire compatibility server backed by the project's local database. It is not MariaDB itself. Native MariaDB remains an optional runtime path when a compatible ARM64 bundle is supplied.
+- READY state is now project-scoped: switching/importing another MySQL project always re-applies its TCP profile, points LocalDevDB at that project's DB, and reruns the PDO MySQL self-test instead of reusing a previous project's READY state.

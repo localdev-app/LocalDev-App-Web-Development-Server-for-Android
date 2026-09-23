@@ -1,0 +1,12 @@
+LocalDev v1.1.0 — Web Extractor
+
+- Added Web Extractor powered by bundled PHP cURL.
+- Extracts server HTML to index.html.
+- Downloads external stylesheets to css/style-N.css.
+- Extracts inline <style> blocks to css/inline.css.
+- Rewrites relative URLs for local preview.
+- Optional image/font/CSS asset download to assets/.
+- Added result actions: Preview HTML, View CSS, Copy HTML, Download ZIP, Project Files.
+- Added public HTTP/HTTPS URL checks, redirect checks, resource count/size limits.
+- Updated Privacy/Terms for Web Extractor behavior and source rights.
+- versionCode 19 / versionName 1.1.0.

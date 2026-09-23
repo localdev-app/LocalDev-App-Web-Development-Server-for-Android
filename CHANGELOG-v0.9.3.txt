@@ -1,0 +1,15 @@
+LocalDev v0.9.3 Beta — Pretty URL + Asset Router
+
+- Extensionless PHP URLs now work: /admin/login -> /admin/login.php.
+- Pretty URL compatibility for common portal routes:
+  /apk/{slug} -> app.php?slug={slug}
+  /kategori/{slug} -> category.php?slug={slug}
+  legal pages -> page.php?slug=...
+  /sitemap.xml -> sitemap.php
+  /robots.txt -> robots.php
+- Simple project .htaccess RewriteRule support when rewrite rules are present.
+- Missing static files no longer fall through to index.php.
+- Hashed upload fallback for stale DB references such as site-icon-OLD.webp when a newer
+  site-icon-*.webp exists in the imported ZIP.
+- Missing /uploads/icons/* can use assets/default-icon.svg as a preview fallback.
+- Router logs pretty-route rewrites and missing/fallback assets in LocalDev Console.

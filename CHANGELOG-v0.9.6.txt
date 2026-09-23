@@ -1,0 +1,12 @@
+LocalDev v0.9.6 Beta — Sticky Session Bridge
+
+- Fix SESSION LOST pada PHP CLI bridge ketika browser/WebView tidak mengirim PHPSESSID.
+- Bridge selalu melaporkan session name + session id aktual setelah setiap request PHP.
+- LocalDev menyimpan session id aktif per project dan menyuntikkannya kembali pada request berikutnya.
+- Session id di-reset saat server/project restart agar project berbeda tidak berbagi login.
+- Set-Cookie browser tetap dipertahankan; sticky session hanya berlaku pada loopback LocalDev single-user.
+- Target: login/session/CSRF halaman PHP terlindungi tetap hidup antar request walau cookie browser hilang.
+
+Catatan:
+- Redirect header Location pada PHP CLI tetap punya keterbatasan. Patch ini memperbaiki persistence session,
+  bukan mengubah CLI menjadi PHP-FPM/FastCGI.

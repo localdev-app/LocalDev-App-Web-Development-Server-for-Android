@@ -1,0 +1,7 @@
+LocalDev v0.9.6 static validation
+
+- Session fallback merge: present
+- Stale PHPSESSID override: present
+- Blank 3xx diagnostic: present
+- Version: 0.9.6-beta1 / code 16
+- Existing router/assets/MySQL-compatible/session polyfill retained from v0.9.4

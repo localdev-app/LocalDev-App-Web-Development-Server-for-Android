@@ -1,0 +1,20 @@
+LocalDev v1.0.0 validation checklist
+
+SOURCE CHECKS
+[OK] MainActivity Kotlin source has no parser-level "expecting"/"unexpected" errors under kotlinc syntax scan.
+[OK] Burger menu is wired to project files/import/export/database/runtime/legal pages.
+[OK] Project browser navigates directories instead of rendering thousands of paths in one dialog.
+[OK] Project browser shows non-text files without attempting to decode/edit them.
+[OK] Text editor file whitelist expanded for common web-project formats and dotfiles.
+[OK] ZIP importer retains zip-slip protection and size/entry limits from v0.9.6.
+[OK] Export excludes .localdev and .localdev-backup internal directories.
+[OK] Version code/name updated to 17 / 1.0.0.
+
+RUNTIME REGRESSION AREAS RETAINED FROM v0.9.6
+- PHP runtime and sticky-session bridge unchanged.
+- LocalDevDB database implementation unchanged.
+- Routing/assets compatibility unchanged.
+- Preview/fullscreen/live preview logic unchanged.
+
+LIMITATION
+A complete Android Gradle build was not executed in this environment because the project package does not include the Gradle wrapper JAR/script and system Gradle is unavailable. Build/install should still be smoke-tested in Android Studio before Play release.

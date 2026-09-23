@@ -1,0 +1,18 @@
+LocalDev v0.9 project compatibility scan — uploaded web source
+
+PASS  index.php
+PASS  config.php
+PASS  database.sql
+PASS  config host array
+PASS  config name array
+PASS  config user array
+PASS  config pass array
+PASS  PDO MySQL DSN
+PASS  PDO connection
+PASS  MariaDB dump marker
+
+Conclusion:
+- Project is a normal PHP + PDO MySQL + database.sql layout.
+- It matches the v0.9 Native Database target architecture.
+- For LocalDev, config should use host/name/user/pass = localhost/localdev/localdev/localdev.
+- Runtime requirement remains: PHP pdo_mysql + Android ARM64 MariaDB runtime.

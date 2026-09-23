@@ -1,0 +1,27 @@
+LocalDev v1.1.0 validation
+
+Passed checks:
+- Web Extractor PHP script: php -l PASS.
+- Fixture extraction with assets OFF: PASS.
+  - index.html created.
+  - css/style-1.css created.
+  - css/inline.css created.
+  - relative HTML/CSS URLs converted to absolute URLs.
+- Fixture extraction with assets ON: PASS.
+  - image/favicon/font/CSS assets saved under assets/.
+  - HTML and CSS references rewritten to local assets.
+- Inline <style media="..."> is preserved as @media in css/inline.css.
+- Android XML resources + AndroidManifest parse: PASS.
+- Kotlin compiler parser reported no syntax-level errors in MainActivity.kt/WebExtractor.kt.
+  Full Android compilation is not performed in this container because the Android SDK/classpath is not installed.
+- versionCode=19 / versionName=1.1.0.
+- INTERNET permission remains present.
+
+Web Extractor limits / safeguards:
+- Only HTTP/HTTPS public URLs are accepted.
+- localhost/private/reserved hosts and URL userinfo are blocked.
+- Redirects are followed manually and revalidated before the next request.
+- Maximum 30 external stylesheet downloads.
+- Maximum 100 optional assets / 40 MB aggregate optional assets.
+- HTML and per-resource size limits are enforced.
+- JavaScript-rendered DOM after page load is not captured; extraction targets server-returned HTML and referenced CSS.

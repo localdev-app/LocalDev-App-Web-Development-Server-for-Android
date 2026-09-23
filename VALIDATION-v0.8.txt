@@ -1,0 +1,15 @@
+LocalDev v0.8.0-alpha1 validation
+- XML resources + AndroidManifest: PASS
+- PHP bridge php -l: PASS
+- prepare_php_runtime.py syntax: PASS
+- SqlDialect.kt compile with JVM test stubs: PASS
+- SqlWorkspaceManager.kt compile with Android API test stubs: PASS
+- ProjectImporter.kt compile with API test stubs: PASS
+- MainActivity.kt parser: no Kotlin syntax diagnostics (full Android build not run in this environment)
+- SQL translator smoke test: MySQL CREATE TABLE + AUTO_INCREMENT + INSERT -> SQLite: PASS
+- Project importer smoke test: project root + public/index.php document root + database.sql detection: PASS
+- ZIP integrity: PASS
+
+Known alpha boundary:
+- Native MariaDB/MySQL server is not bundled yet.
+- SQL Lab uses SQLite compatibility for local testing.

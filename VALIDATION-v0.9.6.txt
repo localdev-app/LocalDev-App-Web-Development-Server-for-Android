@@ -1,0 +1,14 @@
+VALIDATION v0.9.6
+
+Expected flow:
+1. GET installer/login starts a PHP session.
+2. PHP bridge outputs LOCALDEV_SESSION_NAME and LOCALDEV_SESSION_ID.
+3. Kotlin remembers the reported session id.
+4. Next request receives authoritative PHPSESSID even if browser sends no Cookie header.
+5. File-backed session polyfill opens the same sess_<id>.json.
+6. admin_id/admin_username/admin_role persist across requests.
+
+Manual device test:
+- Run buat-admin-localdev-v2.php.
+- Then open cek-admin-localdev.php.
+- Expected: AUTH READY; Cookie PHPSESSID populated; admin_id populated; is_admin() TRUE.

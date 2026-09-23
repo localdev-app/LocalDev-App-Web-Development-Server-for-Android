@@ -1,0 +1,8 @@
+LocalDev v0.7.0
+
+- Global immersive mode untuk seluruh aplikasi.
+- Hide status bar + navigation bar.
+- Re-hide system bars onResume/onWindowFocusChanged/IME transition.
+- Leaving fullscreen preview no longer restores system bars.
+- Display cutout safe padding retained.
+- Splash screen now immersive too.

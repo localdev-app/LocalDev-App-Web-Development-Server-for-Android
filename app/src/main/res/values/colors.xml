@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="localdev_bg">#071018</color>
+    <color name="localdev_surface">#0D1822</color>
+    <color name="localdev_surface_2">#111F2B</color>
+    <color name="localdev_outline">#21384A</color>
+    <color name="localdev_cyan">#12E4E4</color>
+    <color name="localdev_cyan_dark">#00BFC7</color>
+    <color name="localdev_text">#F4F8FB</color>
+    <color name="localdev_muted">#91A7B8</color>
+    <color name="localdev_success">#37D58A</color>
+    <color name="localdev_danger">#FF647C</color>
+</resources>

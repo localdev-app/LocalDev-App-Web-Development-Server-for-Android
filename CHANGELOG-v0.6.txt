@@ -1,0 +1,29 @@
+LocalDev v0.6.0
+
+FIX PHP
+- Memperbaiki crash bridge: session_status() undefined pada PHP ARM64 build tanpa ext/session.
+- Menambahkan LocalDev file-backed session compatibility layer: session_start, session_status,
+  session_id, session_name, session_write_close, session_destroy, session_regenerate_id.
+- Session tetap persisten antar request melalui cookie PHPSESSID dan file session lokal.
+- Menambahkan Location response support pada bridge.
+- PHP tetap berjalan dalam CLI SAPI; tidak kembali ke php -S/cli-server.
+
+EDITOR / PROJECT
+- Tab HTML/CSS/JS/PHP sekarang membaca file asli dari project ZIP jika tersedia.
+- Tombol Files membuka daftar source project dan memungkinkan file PHP/HTML/CSS/JS/JSON/XML/TXT/MD diedit.
+- SAVE menulis perubahan langsung ke project lokal.
+- Jika CSS/JS belum ada, tab dapat membuat style.css/app.js baru.
+- Import file source tunggal tersedia dari menu More.
+- Export ZIP menyimpan project hasil edit kembali ke penyimpanan Android.
+
+PREVIEW
+- Preview fullscreen sungguhan dengan system bars disembunyikan sementara.
+- Floating LIVE PREVIEW di atas editor; dapat digeser, diperbesar ke fullscreen, dan ditutup.
+- Floating preview auto-refresh sekitar 550 ms setelah perubahan source.
+- PHP project yang sedang running ikut reload otomatis pada live preview.
+
+UI / KEYBOARD
+- Tombol diperkecil menjadi toolbar 2x4 setinggi 42dp.
+- Saat keyboard terbuka, header/status/console/action bar disembunyikan agar editor mendapat ruang maksimal.
+- Tabs tetap terlihat sehingga HTML/CSS/JS/PHP bisa diganti saat mengetik.
+- Safe area status/navigation bar tetap dipertahankan.

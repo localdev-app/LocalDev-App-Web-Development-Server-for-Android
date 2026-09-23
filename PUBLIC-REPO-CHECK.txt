@@ -1,0 +1,4 @@
+LocalDev public repository preflight
+Checked for common signing/private-key patterns.
+Potential hits: 0
+No common private signing/API-key patterns found.

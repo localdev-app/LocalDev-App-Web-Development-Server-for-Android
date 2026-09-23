@@ -1,0 +1,8 @@
+LocalDev v0.9.4 Beta — Session / CSRF Login Fix
+
+- Fix session cookie persistence for PHP CLI bridge.
+- Fix session_regenerate_id(true): the regenerated PHPSESSID is now returned to the browser.
+- Add localhost fallback cookie jar when Android WebView/external browser drops Cookie header.
+- Browser-provided Cookie always has priority over fallback jar.
+- Cookie jar resets whenever the PHP server/project restarts.
+- Keeps v0.9.3 pretty routes, assets fallback, and LocalDevDB compatibility.

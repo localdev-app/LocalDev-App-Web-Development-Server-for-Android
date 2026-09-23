@@ -1,0 +1,9 @@
+LocalDev v0.8.3 beta1
+
+FIXED
+- SQL Auto Setup tidak lagi gagal dengan `Illegal group reference`.
+- Config PHP model `return array(...)` dan `return [...]` dipatch tanpa regex replacement yang menafsirkan `$` sebagai group reference.
+
+TEST
+- Re-import project asli/demo lalu tekan Run -> Setup & Run.
+- Jika SQLite sudah dibuat dari percobaan lama, paling aman re-import ZIP agar patch dimulai dari source bersih.
